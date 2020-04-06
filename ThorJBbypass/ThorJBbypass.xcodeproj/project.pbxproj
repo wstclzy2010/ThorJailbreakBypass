@@ -1,0 +1,375 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6D8DF61D241C9C5C002430E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D8DF61C241C9C5C002430E6 /* UIKit.framework */; };
+		6D8DF61F241C9C5C002430E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D8DF61E241C9C5C002430E6 /* Foundation.framework */; };
+		6D8DF621241C9C5C002430E6 /* CydiaSubstrate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D8DF620241C9C5C002430E6 /* CydiaSubstrate.framework */; };
+		6D8DF62A241C9C5C002430E6 /* ThorJBbypass.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6D8DF629241C9C5C002430E6 /* ThorJBbypass.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6D8DF619241C9C5C002430E6 /* ThorJBbypass.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = ThorJBbypass.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D8DF61C241C9C5C002430E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6D8DF61E241C9C5C002430E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6D8DF620241C9C5C002430E6 /* CydiaSubstrate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CydiaSubstrate.framework; path = Library/Frameworks/CydiaSubstrate.framework; sourceTree = DEVELOPER_DIR; };
+		6D8DF625241C9C5C002430E6 /* control */ = {isa = PBXFileReference; lastKnownFileType = text; path = control; sourceTree = "<group>"; };
+		6D8DF627241C9C5C002430E6 /* ThorJBbypass-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ThorJBbypass-Prefix.pch"; path = "../ThorJBbypass-Prefix.pch"; sourceTree = "<group>"; };
+		6D8DF628241C9C5C002430E6 /* ThorJBbypass.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = ThorJBbypass.xm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		6D8DF629241C9C5C002430E6 /* ThorJBbypass.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ThorJBbypass.mm; sourceTree = "<group>"; };
+		6D8DF62E241C9C5C002430E6 /* ThorJBbypass.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ThorJBbypass.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6D8DF615241C9C5C002430E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D8DF61D241C9C5C002430E6 /* UIKit.framework in Frameworks */,
+				6D8DF61F241C9C5C002430E6 /* Foundation.framework in Frameworks */,
+				6D8DF621241C9C5C002430E6 /* CydiaSubstrate.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6D8DF60E241C9C5C002430E6 = {
+			isa = PBXGroup;
+			children = (
+				6D8DF622241C9C5C002430E6 /* ThorJBbypass */,
+				6D8DF61B241C9C5C002430E6 /* Frameworks */,
+				6D8DF61A241C9C5C002430E6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6D8DF61A241C9C5C002430E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6D8DF619241C9C5C002430E6 /* ThorJBbypass.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6D8DF61B241C9C5C002430E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D8DF61C241C9C5C002430E6 /* UIKit.framework */,
+				6D8DF61E241C9C5C002430E6 /* Foundation.framework */,
+				6D8DF620241C9C5C002430E6 /* CydiaSubstrate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6D8DF622241C9C5C002430E6 /* ThorJBbypass */ = {
+			isa = PBXGroup;
+			children = (
+				6D8DF628241C9C5C002430E6 /* ThorJBbypass.xm */,
+				6D8DF629241C9C5C002430E6 /* ThorJBbypass.mm */,
+				6D8DF623241C9C5C002430E6 /* Package */,
+				6D8DF626241C9C5C002430E6 /* Supporting Files */,
+			);
+			path = ThorJBbypass;
+			sourceTree = "<group>";
+		};
+		6D8DF623241C9C5C002430E6 /* Package */ = {
+			isa = PBXGroup;
+			children = (
+				6D8DF624241C9C5C002430E6 /* DEBIAN */,
+				6D8DF62B241C9C5C002430E6 /* Library */,
+			);
+			path = Package;
+			sourceTree = "<group>";
+		};
+		6D8DF624241C9C5C002430E6 /* DEBIAN */ = {
+			isa = PBXGroup;
+			children = (
+				6D8DF625241C9C5C002430E6 /* control */,
+			);
+			path = DEBIAN;
+			sourceTree = "<group>";
+		};
+		6D8DF626241C9C5C002430E6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6D8DF627241C9C5C002430E6 /* ThorJBbypass-Prefix.pch */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6D8DF62B241C9C5C002430E6 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				6D8DF62C241C9C5C002430E6 /* MobileSubstrate */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		6D8DF62C241C9C5C002430E6 /* MobileSubstrate */ = {
+			isa = PBXGroup;
+			children = (
+				6D8DF62D241C9C5C002430E6 /* DynamicLibraries */,
+			);
+			path = MobileSubstrate;
+			sourceTree = "<group>";
+		};
+		6D8DF62D241C9C5C002430E6 /* DynamicLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				6D8DF62E241C9C5C002430E6 /* ThorJBbypass.plist */,
+			);
+			path = DynamicLibraries;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		6D8DF616241C9C5C002430E6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		6D8DF618241C9C5C002430E6 /* ThorJBbypass */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D8DF631241C9C5C002430E6 /* Build configuration list for PBXNativeTarget "ThorJBbypass" */;
+			buildPhases = (
+				6D8DF613241C9C5C002430E6 /* ShellScript */,
+				6D8DF614241C9C5C002430E6 /* Sources */,
+				6D8DF615241C9C5C002430E6 /* Frameworks */,
+				6D8DF616241C9C5C002430E6 /* Headers */,
+				6D8DF617241C9C5C002430E6 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ThorJBbypass;
+			productName = ThorJBbypass;
+			productReference = 6D8DF619241C9C5C002430E6 /* ThorJBbypass.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6D8DF60F241C9C5C002430E6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				TargetAttributes = {
+					6D8DF618241C9C5C002430E6 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 6D8DF612241C9C5C002430E6 /* Build configuration list for PBXProject "ThorJBbypass" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6D8DF60E241C9C5C002430E6;
+			productRefGroup = 6D8DF61A241C9C5C002430E6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6D8DF618241C9C5C002430E6 /* ThorJBbypass */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6D8DF613241C9C5C002430E6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/MonkeyDev/bin/md --xcbp-logos\n";
+		};
+		6D8DF617241C9C5C002430E6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/MonkeyDev/bin/md --xcbp\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6D8DF614241C9C5C002430E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D8DF62A241C9C5C002430E6 /* ThorJBbypass.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6D8DF62F241C9C5C002430E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(MonkeyDevPath)/frameworks/**",
+					"$(MonkeyDevTheosPath)/vendor/lib",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(MonkeyDevTheosPath)/vendor/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = "$(MonkeyDevTheosPath)/vendor/lib/**";
+				MonkeyDevPath = /opt/MonkeyDev;
+				MonkeyDevTheosPath = /opt/theos;
+				OTHER_CFLAGS = "-DTHEOS_INSTANCE_NAME=\"\\\"ThorJBbypass\\\"\"";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6D8DF630241C9C5C002430E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(MonkeyDevPath)/frameworks/**",
+					"$(MonkeyDevTheosPath)/vendor/lib",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(MonkeyDevTheosPath)/vendor/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = "$(MonkeyDevTheosPath)/vendor/lib/**";
+				MonkeyDevPath = /opt/MonkeyDev;
+				MonkeyDevTheosPath = /opt/theos;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-DTHEOS_INSTANCE_NAME=\"\\\"ThorJBbypass\\\"\"";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		6D8DF632241C9C5C002430E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2SRNLG9873;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ThorJBbypass/ThorJBbypass-Prefix.pch";
+				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				MonkeyDevBuildPackageOnAnyBuild = YES;
+				MonkeyDevClearUiCacheOnInstall = NO;
+				MonkeyDevCopyOnBuild = NO;
+				MonkeyDevDeviceIP = "";
+				MonkeyDevDevicePassword = "";
+				MonkeyDevDevicePort = "";
+				MonkeyDevInstallOnAnyBuild = YES;
+				MonkeyDevInstallOnProfiling = YES;
+				MonkeyDevkillProcessOnInstall = Thor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6D8DF633241C9C5C002430E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2SRNLG9873;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ThorJBbypass/ThorJBbypass-Prefix.pch";
+				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				MonkeyDevBuildPackageOnAnyBuild = YES;
+				MonkeyDevClearUiCacheOnInstall = NO;
+				MonkeyDevCopyOnBuild = NO;
+				MonkeyDevDeviceIP = "";
+				MonkeyDevDevicePassword = "";
+				MonkeyDevDevicePort = "";
+				MonkeyDevInstallOnAnyBuild = YES;
+				MonkeyDevInstallOnProfiling = YES;
+				MonkeyDevkillProcessOnInstall = Thor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6D8DF612241C9C5C002430E6 /* Build configuration list for PBXProject "ThorJBbypass" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D8DF62F241C9C5C002430E6 /* Release */,
+				6D8DF630241C9C5C002430E6 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D8DF631241C9C5C002430E6 /* Build configuration list for PBXNativeTarget "ThorJBbypass" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D8DF632241C9C5C002430E6 /* Release */,
+				6D8DF633241C9C5C002430E6 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6D8DF60F241C9C5C002430E6 /* Project object */;
+}

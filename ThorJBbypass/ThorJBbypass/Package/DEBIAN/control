@@ -1,0 +1,17 @@
+Package: com.paigu.ThorJBbypass
+Name: Thor屏蔽越狱检测
+Version: 1.1.5beta6
+Description: 屏蔽Thor的越狱检测、Flex 3插件检测、SuperCharge检测，支持最新版Thor1.3.9.756
+Section: System
+Depends: firmware (>= 9.0), mobilesubstrate
+Conflicts: 
+Replaces: 
+Priority: optional
+Architecture: iphoneos-arm
+Author: 糖醋丶炒排骨
+dev: 
+Homepage: 
+Depiction:
+Maintainer: 
+Icon: 
+

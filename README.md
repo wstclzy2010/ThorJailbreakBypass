@@ -117,9 +117,9 @@ Target 0: (Thor) stopped.
 - (NSArray *)contentsOfDirectoryAtPath:(NSString *)path error:(NSError **)error
 {
     
-   	if([path containsString:@"/Library/MobileSubstrate/DynamicLibraries/"]
-            || [path containsString:@"/Library/Application Support/Supercharge"]
-    		    || [path containsString:@"/Library/Application Support/Flex3"])
+   	if([path containsString:@"/Library/MobileSubstrate/DynamicLibraries/"] ||
+        [path containsString:@"/Library/Application Support/Supercharge"]  ||
+        [path containsString:@"/Library/Application Support/Flex3"])
     {
         path = @"/Library/";
     }
@@ -139,9 +139,9 @@ Target 0: (Thor) stopped.
 + (NSURL *)fileURLWithPath:(NSString *)path
 {
 
-    if([path containsString:@"/Library/MobileSubstrate/DynamicLibraries/"]
-    	    || [path containsString:@"/Library/Application Support/Supercharge"]
-    	        || [path containsString:@"/Library/Application Support/Flex3"])
+    if([path containsString:@"/Library/MobileSubstrate/DynamicLibraries/"] ||
+        [path containsString:@"/Library/Application Support/Supercharge"]  ||
+        [path containsString:@"/Library/Application Support/Flex3"])
     {
         path = @"/Library/";
     }

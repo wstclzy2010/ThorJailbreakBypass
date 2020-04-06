@@ -118,8 +118,8 @@ Target 0: (Thor) stopped.
 {
     
    	if([path containsString:@"/Library/MobileSubstrate/DynamicLibraries/"]
-    	|| [path containsString:@"/Library/Application Support/Supercharge"]
-    		|| [path containsString:@"/Library/Application Support/Flex3"])
+            || [path containsString:@"/Library/Application Support/Supercharge"]
+    		    || [path containsString:@"/Library/Application Support/Flex3"])
     {
         path = @"/Library/";
     }
@@ -140,8 +140,8 @@ Target 0: (Thor) stopped.
 {
 
     if([path containsString:@"/Library/MobileSubstrate/DynamicLibraries/"]
-    	|| [path containsString:@"/Library/Application Support/Supercharge"]
-    		|| [path containsString:@"/Library/Application Support/Flex3"])
+    	    || [path containsString:@"/Library/Application Support/Supercharge"]
+    	        || [path containsString:@"/Library/Application Support/Flex3"])
     {
         path = @"/Library/";
     }

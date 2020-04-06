@@ -58,11 +58,13 @@ Target 0: (Thor) stopped.
 ![Alt text](https://github.com/wstclzy2010/ThorJailbreakBypass/blob/master/img/3.png)
 * F5看下伪代码，结果碰到 positive sp value has been found。
 * 在ida-general中打开stack pointer，在0x10000B7B8处option+K，修改其difference值为0。
-* 成功显示伪代码
+* 成功显示伪代码:
+
 ![Alt text](https://github.com/wstclzy2010/ThorJailbreakBypass/blob/master/img/4.png)
 ![Alt text](https://github.com/wstclzy2010/ThorJailbreakBypass/blob/master/img/5.png)
 ![Alt text](https://github.com/wstclzy2010/ThorJailbreakBypass/blob/master/img/6.png)
 ![Alt text](https://github.com/wstclzy2010/ThorJailbreakBypass/blob/master/img/7.png)
+
 很明显的，他是通过判断越狱所特有的文件路径、目录来检测越狱的，结合搜索引擎，大概用到了这些方法，给这些方法分别%log，查看控制台的输出内容：
 ```
 + (NSURL *)fileURLWithPath:(NSString *)path;
@@ -98,7 +100,9 @@ Target 0: (Thor) stopped.
 %end
 ```
 ![Alt text](https://github.com/wstclzy2010/ThorJailbreakBypass/blob/master/img/8.png)
+
 * 根据控制台的输出，明显的，他检测了这些目录和文件：
+
 ```
 /Library/MobileSubstrate/DynamicLibraries
 /Library/Application Support 
@@ -106,6 +110,7 @@ Target 0: (Thor) stopped.
 /User/Library/Application Support/Supercharge
 /var/mobile/Library/UserConfiguration/Profiles/PublicInfo
 ```
+
 * 那就一股脑全干掉
 ```
 %hook NSFileManager
@@ -156,4 +161,4 @@ Target 0: (Thor) stopped.
 %end
 ```
 * 成功进入App，收工。
-![Alt text](https://github.com/wstclzy2010/ThorJailbreakBypass/blob/master/img/9.png)
+![Alt text](https://github.com/wstclzy2010/ThorJailbreakBypass/blob/master/img/9.PNG)

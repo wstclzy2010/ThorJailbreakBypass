@@ -4,7 +4,7 @@
 ---
 WHAT：
 * 越狱环境开启App会提示
-
+![Alt text](https://github.com/wstclzy2010/ThorJailbreakBypass/blob/master/img/1.png)
 * 然后卸载应用重新安装后试图利用liberty lite和flyjb等一众屏蔽越狱检测插件去屏蔽，发现没什么用处，反而还导致了程序直接退出，连提示都不显示了。
 * 听说OC程序的强制退出常用的是exit函数，就从这里去找
 
@@ -16,8 +16,7 @@ process connect connect://localhost:2345
 dumpdecrypted -X
 ```
 * 拖入ida，搜索exit，拿到地址0x1002A0128
-
-
+![Alt text](https://github.com/wstclzy2010/ThorJailbreakBypass/blob/master/img/2.png)
 * 在c1c000+1002A0128处下断点
 ```
 (lldb) image list -o -f
@@ -56,12 +55,15 @@ Target 0: (Thor) stopped.
 ```
 * 得到地址0x100c277b8，100c277b8减去c1c000=10000B7B8应该就是想要的函数所在地址
 * 去ida中搜索10000B7B8
-
+![Alt text](https://github.com/wstclzy2010/ThorJailbreakBypass/blob/master/img/3.png)
 * F5看下伪代码，结果碰到 positive sp value has been found。
 * 在ida-general中打开stack pointer，在0x10000B7B8处option+K，修改其difference值为0。
-* 成功显示伪代码
+* 成功显示伪代码:
 
-
+![Alt text](https://github.com/wstclzy2010/ThorJailbreakBypass/blob/master/img/4.png)
+![Alt text](https://github.com/wstclzy2010/ThorJailbreakBypass/blob/master/img/5.png)
+![Alt text](https://github.com/wstclzy2010/ThorJailbreakBypass/blob/master/img/6.png)
+![Alt text](https://github.com/wstclzy2010/ThorJailbreakBypass/blob/master/img/7.png)
 
 很明显的，他是通过判断越狱所特有的文件路径、目录来检测越狱的，结合搜索引擎，大概用到了这些方法，给这些方法分别%log，查看控制台的输出内容：
 ```
@@ -97,10 +99,10 @@ Target 0: (Thor) stopped.
 
 %end
 ```
-
-
+![Alt text](https://github.com/wstclzy2010/ThorJailbreakBypass/blob/master/img/8.png)
 
 * 根据控制台的输出，明显的，他检测了这些目录和文件：
+
 ```
 /Library/MobileSubstrate/DynamicLibraries
 /Library/Application Support 
@@ -108,21 +110,18 @@ Target 0: (Thor) stopped.
 /User/Library/Application Support/Supercharge
 /var/mobile/Library/UserConfiguration/Profiles/PublicInfo
 ```
+
 * 那就一股脑全干掉
 ```
 %hook NSFileManager
 - (NSArray *)contentsOfDirectoryAtPath:(NSString *)path error:(NSError **)error
 {
     
-    if([path containsString:@"/Library/MobileSubstrate/DynamicLibraries"])
+   	if([path containsString:@"/Library/MobileSubstrate/DynamicLibraries/"]
+            || [path containsString:@"/Library/Application Support/Supercharge"]
+    		    || [path containsString:@"/Library/Application Support/Flex3"])
     {
         path = @"/Library/";
-    }
-    
-    if([path containsString:@"/Library/Application Support/Supercharge"] ||
-       [path containsString:@"/Library/Application Support/Flex3"] )
-    {
-        path = @"/var/";
     }
 
     if([path containsString:@"/var/mobile/Library/UserConfiguration/Profiles/PublicInfo/Flex3Patches.plist"])
@@ -140,15 +139,11 @@ Target 0: (Thor) stopped.
 + (NSURL *)fileURLWithPath:(NSString *)path
 {
 
-    if([path containsString:@"/Library/MobileSubstrate/DynamicLibraries/"])
+    if([path containsString:@"/Library/MobileSubstrate/DynamicLibraries/"]
+    	    || [path containsString:@"/Library/Application Support/Supercharge"]
+    	        || [path containsString:@"/Library/Application Support/Flex3"])
     {
         path = @"/Library/";
-    }
-
-    if([path containsString:@"/Library/Application Support/Supercharge"] ||
-       [path containsString:@"/Library/Application Support/Flex3"] )
-    {
-        path = @"/var";
     }
 
     %log;
@@ -158,3 +153,4 @@ Target 0: (Thor) stopped.
 %end
 ```
 * 成功进入App，收工。
+![Alt text](https://github.com/wstclzy2010/ThorJailbreakBypass/blob/master/img/9.PNG)
